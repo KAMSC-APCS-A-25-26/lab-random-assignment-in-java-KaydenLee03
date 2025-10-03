@@ -1,20 +1,16 @@
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class RandomPercentage {
     public static void main(String[] args) {
-        // TODO: Create two Random objects
-        // 1. One Random object without a seed (unseeded)
-        // 2. One Random object with any seed value (seeded)
-        
-        // TODO: Generate random double values from both Random objects
-        // Use nextDouble() method to get values between 0.0 and 1.0
-        
-        // TODO: Format as percentages
-        // Format the values to exactly 2 decimal places
-        // Display with % symbol
-        
-        // TODO: Display the values as percentages
-        // Show both unseeded and seeded random values
-        // Each value should be formatted as below
+        Random random1 = new Random();
+        Random random2 = new Random(2);
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+
+        double percent1 = random1.nextDouble()*100;
+        double percent2 = random2.nextDouble()*100;
+
+        System.out.println("Unseeded Random: " + decimalFormat.format(percent1) + "%");
+        System.out.println("Seeded Random: " + decimalFormat.format(percent2) + "%");
     }
 }
