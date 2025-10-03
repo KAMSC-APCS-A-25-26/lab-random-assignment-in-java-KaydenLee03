@@ -2,16 +2,20 @@ import java.util.Random;
 
 public class DiceRoller {
     public static void main(String[] args) {
-        // TODO: Create Random objects for dice rolling
-        // 1. Three Random objects without seeds (unseeded dice)
-        // 2. One Random object with any seed value (seeded die)
-        
-        // TODO: Generate random integers for dice rolls
-        
-        // TODO: Display the dice rolls - 1-6
-        // Show all four dice rolls with clear labels
-        
-        // TODO: Demonstrate the difference between seeded and unseeded
-        // Run the program multiple times to show seeded consistency
+        Random random1= new Random();
+        Random random2 = new Random();
+        Random random3 = new Random();
+        Random random4 = new Random(4);
+
+        int num1 = random1.nextInt(6) + 1;
+        int num2  = random2.nextInt(6) + 1;
+        int num3 = random3.nextInt(6) + 1;
+        int num4 = random4.nextInt(6) + 1;
+
+        System.out.println("Unseeded Die 1: " + num1);
+        System.out.println("Unseeded Die 2: " + num2);
+        System.out.println("Unseeded Die 3: " + num3);
+        System.out.println("Seeded Die: " + num4);
+
     }
 }
